@@ -1,10 +1,16 @@
 {
   "name": "frontend-boilerplate",
   "version": "1.0.0",
-  "description": "A boilerplate for developing production ready front ends using React, Redux, React Router, Webpack, Mocha, Eslint etc..",
+  "description":
+    "A boilerplate for developing production ready front ends using React, Redux, React Router, Webpack, Chai, Mocha, Eslint etc..",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf dist",
+    "build": "NODE_ENV=production npm run clean && webpack -p",
+    "dev": "webpack-dev-server",
+    "test":
+      "mocha --compilers js:babel-core/register --require babel-polyfill --require ./test/test_helper.js 'test/**/*.js'",
+    "test:watch": "npm run test -- --watch"
   },
   "keywords": [
     "react",
@@ -13,13 +19,49 @@
     "redux",
     "react-redux",
     "webpack",
-    "webpack",
-    "3",
-    "react-router",
-    "4",
+    "webpack3",
+    "react-router4",
     "eslint",
     "mocha."
   ],
   "author": "Bas",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-form": "^7.0.4",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.2",
+    "chai-jquery": "^2.0.0",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.3.0",
+    "expect": "^21.0.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^2.30.1",
+    "image-webpack-loader": "^3.4.2",
+    "jquery": "^3.2.1",
+    "jsdom": "^11.2.0",
+    "mocha": "^3.5.0",
+    "react-addons-test-utils": "^15.6.0",
+    "rimraf": "^2.6.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.7.1"
+  }
 }
