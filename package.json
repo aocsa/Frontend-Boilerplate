@@ -10,7 +10,7 @@
     "build": "NODE_ENV=production npm run clean && webpack -p",
     "dev": "NODE_ENV=development webpack-dev-server",
     "test":
-      "NODE_ENV=test mocha --compilers js:babel-core/register  --require babel-polyfill ./test/test_helper.js 'test/**/*.js'",
+      "NODE_ENV=test mocha --compilers js:babel-core/register  --require ./test/css-null-compiler.js babel-polyfill ./test/test_helper.js 'test/**/*.js'",
     "test:watch": "NODE_ENV=test npm run test -- --watch",
     "commit":
       "git add . && git commit -m 'Commit by commit script automatically. Do not worry about the contents. Probably a semi colon fix or a curly bracket delete here and there.' && git push origin master",
