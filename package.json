@@ -10,7 +10,8 @@
     "dev": "webpack-dev-server",
     "test":
       "mocha --compilers js:babel-core/register --require babel-polyfill --require ./test/test_helper.js 'test/**/*.js'",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "commit": "git add . && git commit -m 'commit by commit script' && git push origin master"
   },
   "keywords": [
     "react",
