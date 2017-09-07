@@ -1,17 +1,19 @@
 {
   "name": "frontend-boilerplate",
   "version": "1.0.0",
+  "repository": "https://github.com/Babazon/Frontend-Boilerplate.git",
   "description":
     "A boilerplate for developing production ready front ends using React, Redux, React Router, Webpack, Chai, Mocha, Eslint etc..",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
     "build": "NODE_ENV=production npm run clean && webpack -p",
-    "dev": "webpack-dev-server",
+    "dev": "NODE_ENV=development webpack-dev-server",
     "test":
-      "mocha --compilers js:babel-core/register --require babel-polyfill --require ./test/test_helper.js 'test/**/*.js'",
-    "test:watch": "npm run test -- --watch",
-    "commit": "git add . && git commit -m 'commit by commit script' && git push origin master"
+      "NODE_ENV=test mocha --compilers js:babel-core/register  --require babel-polyfill ./test/test_helper.js 'test/**/*.js'",
+    "test:watch": "NODE_ENV=test npm run test -- --watch",
+    "commit": "git add . && git commit -m 'commit by commit script' && git push origin master",
+    "dev-node": "NODE_ENV=production nodemon index.js"
   },
   "keywords": [
     "react",
@@ -23,7 +25,7 @@
     "webpack3",
     "react-router4",
     "eslint",
-    "mocha."
+    "mocha"
   ],
   "author": "Bas",
   "license": "ISC",
@@ -41,6 +43,7 @@
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.2",
+    "babel-plugin-transform-require-ignore": "^0.1.1",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
@@ -53,11 +56,12 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.3.0",
     "expect": "^21.0.0",
+    "express": "^4.15.4",
     "extract-text-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^2.30.1",
     "image-webpack-loader": "^3.4.2",
     "jquery": "^3.2.1",
-    "jsdom": "^11.2.0",
+    "jsdom": "^8.5.0",
     "mocha": "^3.5.0",
     "react-addons-test-utils": "^15.6.0",
     "rimraf": "^2.6.1",

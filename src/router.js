@@ -6,13 +6,21 @@ import Navbar from './components/navbar';
 import Home from './components/home';
 import Footer from './components/footer';
 
+const NoMatch = ({ location }) => (
+  <div>
+    <h3>
+      No match for <code>{location.pathname}</code>
+    </h3>
+  </div>
+);
+
 const Router = () => (
   <BrowserRouter>
     <div className="container">
       <Route component={Navbar} />
       <Switch>
-        <Route path="/" component={Home} />
-        <Route path="*" component={() => <h1>Not found</h1>} />
+        <Route exact path="/" component={Home} />
+        <Route path="*" component={NoMatch} />
       </Switch>
       <Route component={Footer} />
     </div>

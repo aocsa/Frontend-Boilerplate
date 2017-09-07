@@ -6,12 +6,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const packageJSON = require('./package.json');
 
-const vendor_libraries = Object.keys(packageJSON.dependencies);
+const VENDOR = Object.keys(packageJSON.dependencies);
 
 module.exports = {
   entry: {
     bundle: ['babel-polyfill', './src/app.js'],
-    vendor: vendor_libraries,
+    vendor: VENDOR,
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -57,5 +57,4 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
   ],
-  devtool: 'source-map',
 };
