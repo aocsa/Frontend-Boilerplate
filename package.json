@@ -1,0 +1,25 @@
+{
+  "name": "frontend-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for developing production ready front ends using React, Redux, React Router, Webpack, Mocha, Eslint etc..",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "react-router",
+    "router",
+    "redux",
+    "react-redux",
+    "webpack",
+    "webpack",
+    "3",
+    "react-router",
+    "4",
+    "eslint",
+    "mocha."
+  ],
+  "author": "Bas",
+  "license": "ISC"
+}
