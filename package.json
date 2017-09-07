@@ -12,8 +12,10 @@
     "test":
       "NODE_ENV=test mocha --compilers js:babel-core/register  --require babel-polyfill ./test/test_helper.js 'test/**/*.js'",
     "test:watch": "NODE_ENV=test npm run test -- --watch",
-    "commit": "git add . && git commit -m 'commit by commit script' && git push origin master",
-    "dev-node": "NODE_ENV=production nodemon index.js"
+    "commit":
+      "git add . && git commit -m 'Commit by commit script automatically. Do not worry about the contents. Probably a semi colon fix or a curly bracket delete here and there.' && git push origin master",
+    "dev-node": "NODE_ENV=production nodemon index.js",
+    "gitcommit": "gitcommit"
   },
   "keywords": [
     "react",
