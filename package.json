@@ -7,7 +7,6 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "herokubuild": "NODE_ENV=production npm run webpack -p",
     "build": "NODE_ENV=production npm run clean && webpack -p",
     "dev": "NODE_ENV=development webpack-dev-server",
     "test":
@@ -20,6 +19,7 @@
     "surge": "surge -p dist",
     "start": "npm run herokubuild && node index.js",
     "build:dist": "NODE_ENV=production webpack --progress",
+    "herokubuild": "NODE_ENV=production webpack -p",
     "heroku-postbuild": "npm run build:dist; npm prune --production"
   },
   "keywords": [
