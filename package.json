@@ -17,7 +17,7 @@
     "dev-node": "NODE_ENV=development nodemon index.js",
     "gitcommit": "gitcommit",
     "surge": "surge -p dist",
-    "start": "npm run herokubuild && node index.js",
+    "start": "npm install && npm run herokubuild && node index.js",
     "build:dist": "NODE_ENV=production webpack --progress",
     "herokubuild": "NODE_ENV=production webpack -p",
     "heroku-postbuild": "npm run build:dist; npm prune --production"
