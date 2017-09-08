@@ -7,7 +7,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "NODE_ENV=production npm run clean && webpack -p",
+    "cleanbuild": "NODE_ENV=production npm run clean && webpack -p",
     "dev": "NODE_ENV=development webpack-dev-server",
     "test":
       "NODE_ENV=test mocha --compilers js:babel-core/register  --require ./test/requireHacker.js babel-polyfill ./test/test_helper.js 'test/**/*.js'",
@@ -17,8 +17,8 @@
     "dev-node": "NODE_ENV=development nodemon index.js",
     "gitcommit": "gitcommit",
     "surge": "surge -p dist",
-    "start": "npm install ; npm run herokubuild ; node index.js",
-    "herokubuild": "webpack",
+    "start": "node index.js",
+    "build": "NODE_ENV=production webpack",
     "build:dist": "NODE_ENV=production webpack --progress",
     "heroku-postbuild": "npm run build:dist; npm prune --production"
   },
