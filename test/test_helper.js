@@ -1,7 +1,7 @@
 import jsdom from 'jsdom'; // like karma! fake browser, fake news.
 import jquery from 'jquery'; // access elements on the fake dom
 
-import TestUtils from 'react-addons-test-utils'; // react test rendering
+import TestUtils from 'react-dom/test-utils'; // react test rendering
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -37,7 +37,7 @@ const renderComponent = (ComponentClass, componentProps, reduxStoreState) => {
 // ////////////////////////////////////////////////////////////////////////////
 
 // build helper for simulating events //////////////////////
-$.fn.simulate = function(eventName, value) {
+$.fn.simulate = function (eventName, value) {
   if (value) this.val(value); // cant use () => {} due to this keyword
   // refer to mapped function via object[eventName] , ont he first element it finds
   TestUtils.Simulate[eventName](this[0]);

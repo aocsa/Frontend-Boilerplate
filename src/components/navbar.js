@@ -15,7 +15,7 @@ class Navbar extends Component {
           <div>
             <ul className="nav navbar-nav">
               <li>
-                <Link to="/">Defunct link</Link>
+                <Link to="/BTM">Defunct link</Link>
               </li>
             </ul>
           </div>

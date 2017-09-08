@@ -37,11 +37,11 @@ app.use((req, res, next) => {
   }
 }); // this breaks localhost:port start
 
-// app.use(express.static('public'));
-//
-// app.get('*', (request, response) => {
-//   response.sendFile(path.join(__dirname, 'dist', 'index.html'));
-// });
+app.use(express.static('dist'));
+
+app.get('*', (request, response) => {
+  response.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
 
 const server = http.createServer(app);
 
