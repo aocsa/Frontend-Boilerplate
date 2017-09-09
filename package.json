@@ -13,7 +13,7 @@
       "NODE_ENV=test mocha --compilers js:babel-core/register  --require ./test/requireHacker.js babel-polyfill ./test/test_helper.js 'test/**/*.js'",
     "test:watch": "NODE_ENV=test npm run test -- --watch",
     "commit":
-      "git add . && git commit -m 'Commit by commit script automatically. Do not worry about the contents. Probably a semi colon fix or a curly bracket delete here and there.' && git push origin master",
+      "npm run clean && git add . && git commit -m 'Commit by commit script automatically. Do not worry about the contents. Probably a semi colon fix or a curly bracket delete here and there.' && git push origin master",
     "surge": "npm run build && surge -p dist",
     "amazon": "npm run build && s3-website deploy dist",
     "github":
@@ -75,6 +75,7 @@
     "rimraf": "^2.6.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.5.6",
+    "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^2.7.1"
   }
 }
