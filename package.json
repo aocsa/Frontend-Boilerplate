@@ -2,16 +2,18 @@
   "name": "frontend-boilerplate",
   "version": "1.0.0",
   "repository": "https://github.com/Babazon/Frontend-Boilerplate.git",
-  "description": "A boilerplate for developing production ready front ends using React, Redux, React Router, Webpack, Chai, Mocha, Eslint etc..",
+  "description":
+    "A boilerplate for developing production ready front ends using React, Redux, React Router, Webpack, Chai, Mocha, Eslint etc..",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
     "build": "NODE_ENV=production npm run clean && webpack",
     "dev": "NODE_ENV=development webpack-dev-server",
-    "test": "NODE_ENV=test mocha --compilers js:babel-core/register  --require ./test/requireHacker.js babel-polyfill ./test/test_helper.js 'test/**/*.js'",
+    "test":
+      "NODE_ENV=test mocha --compilers js:babel-core/register  --require ./test/requireHacker.js babel-polyfill ./test/test_helper.js 'test/**/*.js'",
     "test:watch": "NODE_ENV=test npm run test -- --watch",
-    "commit": "git add . && git commit -m 'Commit by commit script automatically. Do not worry about the contents. Probably a semi colon fix or a curly bracket delete here and there.' && git push origin master",
-    "gitcommit": "gitcommit",
+    "commit":
+      "git add . && git commit -m 'Commit by commit script automatically. Do not worry about the contents. Probably a semi colon fix or a curly bracket delete here and there.' && git push origin master",
     "surge": "surge -p dist"
   },
   "keywords": [
