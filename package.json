@@ -2,22 +2,18 @@
   "name": "frontend-boilerplate",
   "version": "1.0.0",
   "repository": "https://github.com/Babazon/Frontend-Boilerplate.git",
-  "description":
-    "A boilerplate for developing production ready front ends using React, Redux, React Router, Webpack, Chai, Mocha, Eslint etc..",
+  "description": "A boilerplate for developing production ready front ends using React, Redux, React Router, Webpack, Chai, Mocha, Eslint etc..",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
     "build": "NODE_ENV=production npm run clean && webpack",
     "dev": "NODE_ENV=development webpack-dev-server",
-    "test":
-      "NODE_ENV=test mocha --compilers js:babel-core/register  --require ./test/requireHacker.js babel-polyfill ./test/test_helper.js 'test/**/*.js'",
+    "test": "NODE_ENV=test mocha --compilers js:babel-core/register  --require ./test/requireHacker.js babel-polyfill ./test/test_helper.js 'test/**/*.js'",
     "test:watch": "NODE_ENV=test npm run test -- --watch",
-    "commit":
-      "npm run clean && git add . && git commit -m 'Commit by commit script automatically. Do not worry about the contents. Probably a semi colon fix or a curly bracket delete here and there.' && git push origin master",
+    "commit": "npm run clean && git add . && git commit -m 'Commit by commit script automatically. Do not worry about the contents. Probably a semi colon fix or a curly bracket delete here and there.' && git push origin master",
     "surge": "npm run build && surge -p dist",
     "amazon": "npm run build && s3-website deploy dist",
-    "github":
-      "git checkout gh-pages && npm run build && git subtree push --prefix dist origin gh-pages && git checkout master",
+    "github": "git checkout gh-pages && npm run build && git subtree push --prefix dist origin gh-pages && git checkout master",
     "aws": "eb init && eb create && eb setenv NODE_ENV=production"
   },
   "keywords": [
@@ -38,6 +34,7 @@
   "author": "Bas",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.15.4",
     "react": "^16.0.0-rc.2",
     "react-dom": "^16.0.0-rc.2",
     "react-redux": "^5.0.6",
@@ -64,7 +61,6 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.3.0",
     "expect": "^21.0.0",
-    "express": "^4.15.4",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",

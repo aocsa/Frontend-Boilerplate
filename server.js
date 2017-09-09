@@ -12,6 +12,7 @@ const app = express();
 // DEFINE ALL API ROUTES RIGHT HERE, BEFORE SWITCH!!
 // //////////////////////////////////////////////////
 
+/* eslint-disable no-case-declarations global-require */
 switch (true) {
   case process.env.NODE_ENV !== 'production':
     const webpackMiddleware = require('webpack-dev-middleware');
@@ -28,6 +29,7 @@ switch (true) {
   default:
     break;
 }
+/* eslint-enable */
 
 // app.use((req, res, next) => {
 //   if (req.headers['x-forwarded-proto'] === 'https') {
