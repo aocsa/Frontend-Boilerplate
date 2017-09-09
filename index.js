@@ -19,9 +19,7 @@ Then install more dev dependencies for testing :
 
 npm i --save-dev chai chai-jquery jquery jsdom@8.5.0 mocha react-addons-test-utils expect
 
-
-git push heroku master (Procfile, and express middleware setup)
-git checkout -b gh-pages (dist must not be on gitingnore)
-set aws eb NODE_ENV=production manually
+heroku create
+eb init && eb create
 
 */
