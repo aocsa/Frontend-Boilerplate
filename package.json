@@ -14,8 +14,8 @@
     "surge": "npm run build && surge -p dist",
     "amazon": "npm run build && s3-website deploy dist",
     "github": "git checkout gh-pages && npm run build && git subtree push --prefix dist origin gh-pages && git checkout master",
-    "heroku": "npm un express && npm i express && git push heroku master && npm un express && npm i --save-dev express",
-    "aws": "npm un express && npm i express && eb setenv NODE_ENV=production && eb deploy && npm un express && npm i --save-dev express && eb open "
+    "heroku": "npm un express && npm i express && npm run commit && git push heroku master && npm un express && npm i --save-dev express && npm run commit && heroku open",
+    "aws": "npm un express && npm i express && npm run commit && eb setenv NODE_ENV=production && eb deploy && npm un express && npm i --save-dev express && npm run commit && eb open "
   },
   "keywords": [
     "react",
@@ -35,6 +35,7 @@
   "author": "Bas",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.15.4",
     "react": "^16.0.0-rc.2",
     "react-dom": "^16.0.0-rc.2",
     "react-redux": "^5.0.6",
@@ -61,7 +62,6 @@
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.3.0",
     "expect": "^21.0.0",
-    "express": "^4.15.4",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
