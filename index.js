@@ -5,7 +5,7 @@ First create the scaffold
 
 Then install dependencies:
 
-npm i react react-dom react-redux redux react-router react-router-dom redux-form redux-thunk
+npm i react@next react-dom@next react-redux redux react-router react-router-dom redux-form redux-thunk
 
 Then install eslint package:
 
@@ -17,6 +17,11 @@ npm i --save-dev babel-core babel-polyfill babel-loader babel-preset-env babel-p
 
 Then install more dev dependencies for testing :
 
-npm i --save-dev chai chai-jquery jquery jsdom mocha react-addons-test-utils expect
+npm i --save-dev chai chai-jquery jquery jsdom@8.5.0 mocha react-addons-test-utils expect
+
+
+git push heroku master (Procfile, and express middleware setup)
+git checkout -b gh-pages (dist must not be on gitingnore)
+set aws eb NODE_ENV=production manually
 
 */
