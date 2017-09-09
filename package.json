@@ -35,7 +35,6 @@
   "author": "Bas",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.4",
     "react": "^16.0.0-rc.2",
     "react-dom": "^16.0.0-rc.2",
     "react-redux": "^5.0.6",
