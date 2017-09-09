@@ -3,11 +3,9 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
 const packageJSON = require('./package.json');
 
 const VENDOR = Object.keys(packageJSON.dependencies);
-
 module.exports = {
   entry: {
     bundle: ['babel-polyfill', './src/app.js'],
