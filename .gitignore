@@ -31,3 +31,7 @@ test/data/**/*.actual.html
 /package-lock.json
 /yarn.lock
 /yarn-error.log
+
+### Amazon Deployment
+.env
+.s3-website.json
