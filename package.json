@@ -14,7 +14,12 @@
     "surge": "npm run build && surge -p dist",
     "amazon": "npm run build && s3-website deploy dist",
     "github": "git checkout gh-pages && npm run build && git subtree push --prefix dist origin gh-pages && git checkout master",
-    "aws": "eb init && eb create && eb setenv NODE_ENV=production"
+    "heroku": "npm un express && npm i express
+ & git push heroku master && npm un express && npm i --save-dev express
+",
+    "aws": "npm un express && npm i express
+ && eb init && eb create && eb setenv NODE_ENV=production && npm un express && npm i --save-dev express
+"
   },
   "keywords": [
     "react",

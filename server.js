@@ -12,6 +12,8 @@ const app = express();
 // DEFINE ALL API ROUTES RIGHT HERE, BEFORE SWITCH!!
 // //////////////////////////////////////////////////
 
+app.get('server.js', (req, res) => { /* do somewhat different instead of sending server.js to client */ }
+
 /* eslint-disable no-case-declarations global-require */
 switch (true) {
   case process.env.NODE_ENV !== 'production':
