@@ -13,21 +13,17 @@ const app = express();
 // //////////////////////////////////////////////////
 
 /* eslint-disable no-case-declarations global-require */
-switch (true) {
-  case process.env.NODE_ENV !== 'production':
-    const webpackMiddleware = require('webpack-dev-middleware');
-    const webpack = require('webpack');
-    const webpackConfig = require('./webpack.config');
-    app.use(webpackMiddleware(webpack(webpackConfig)));
-    break;
-  case process.env.NODE_ENV === 'production':
-    app.use(express.static('dist'));
-    app.get('*', (request, response) => {
-      response.sendFile(path.join(__dirname, 'dist', 'index.html'));
-    });
-    break;
-  default:
-    break;
+
+if (process.env.NODE_ENV !== 'production') {
+  const webpackMiddleware = require('webpack-dev-middleware');
+  const webpack = require('webpack');
+  const webpackConfig = require('./webpack.config');
+  app.use(webpackMiddleware(webpack(webpackConfig)));
+} else if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('dist'));
+  app.get('*', (request, response) => {
+    response.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  });
 }
 /* eslint-enable */
 
