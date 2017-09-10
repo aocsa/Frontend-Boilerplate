@@ -19,37 +19,39 @@ Then install more dev dependencies for testing :
 
 npm i --save-dev chai chai-jquery jquery jsdom@8.5.0 mocha react-addons-test-utils expect
 
+
+touch .env echo aws secret and key   for s3 amazon
 heroku create
-eb init && eb create
+mkdir .elasticbeanstalk && eb init && eb create
 
 FOR HEROKU AND EB TO WORK:
 
 1- EXPRESS MUST BE IN DEPENDENCIES BUT NOT COMPILED BY WEBPACK
 2- THE APP MUST HAVE BEEN BUILT INTO DIST DIRECTORY AND DIST MUST NOT BE ON GITIGNORE!
 
-git add .
-git commit -m "Preparing to deploy on Heroku"
-npm run build
-git add .
-git commit -m "Deploying on Heroku"
-git push heroku master
-heroku open
-npm run clean
-git add .
-git commit -m "deployed on heroku, cleaned dist folder again.."
+git add . &&
+git commit -m 'Preparing to deploy on Heroku' &&
+npm run build &&
+git add . &&
+git commit -m 'Deploying on Heroku' &&
+git push heroku master &&
+heroku open &&
+npm run clean &&
+git add . &&
+git commit -m 'deployed on heroku, cleaned dist folder again..'
 
 
-git add .
-git commit -m "preparing to deploy on AWS Elastic Beanstalk"
-npm run build
-git add .
-git commit -m "Deploying on AWS Elastic Beanstalk"
-eb deploy
-eb setenv NODE_ENV=production
-eb open
-npm run clean
-git add .
-git commit -m "Deployed on AWS Elastic Beanstalk, cleaning dist folder.."
+git add . &&
+git commit -m 'preparing to deploy on AWS Elastic Beanstalk' &&
+npm run build &&
+git add . &&
+git commit -m 'Deploying on AWS Elastic Beanstalk' &&
+eb deploy &&
+eb setenv NODE_ENV=production &&
+eb open &&
+npm run clean &&
+git add . &&
+git commit -m 'Deployed on AWS Elastic Beanstalk, cleaning dist   folder..'
 
 
 */
