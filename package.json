@@ -18,8 +18,10 @@
     "amazon": "npm run build && s3-website deploy dist",
     "github":
       "git checkout gh-pages && npm run build && git subtree push --prefix dist origin gh-pages && git checkout master",
-    "heroku": "npm run commit && git push heroku master && heroku open",
-    "aws": "npm run commit && eb setenv NODE_ENV=production && eb deploy && eb open"
+    "heroku":
+      "npm run build && git commit -m 'Deploying on heroku' && git push heroku master && npm run clean && git add . && git commit -m 'deployed on heroku rolling back dist folder' && heroku open",
+    "aws":
+      "npm run build && git add . && git commit -m 'deploying on elastic beanstalk' && eb setenv NODE_ENV=production && eb deploy && npm run clean && git add . && git commit -m 'deployed on elastic beanstalk' && eb open"
   },
   "keywords": [
     "react",

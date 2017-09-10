@@ -22,4 +22,10 @@ npm i --save-dev chai chai-jquery jquery jsdom@8.5.0 mocha react-addons-test-uti
 heroku create
 eb init && eb create
 
+FOR HEROKU AND EB TO WORK:
+
+1- EXPRESS MUST BE IN DEPENDENCIES BUT NOT COMPILED BY WEBPACK
+2- THE APP MUST HAVE BEEN BUILT INTO DIST DIRECTORY AND DIST MUST NOT BE ON GITIGNORE!
+
+
 */
