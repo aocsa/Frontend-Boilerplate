@@ -1,15 +1,35 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Loadable from 'react-loadable';
 
 // import components
 import Navbar from './components/navbar';
 import Home from './components/home';
 import Footer from './components/footer';
+import LoadingPage from './components/loading';
 
+const AsyncHome = Loadable({
+  loader: () => import(/* webpackChunkName: 'home' */ './components/home'),
+  loading: LoadingPage,
+  delay: 300,
+});
+
+const AsyncNavbar = Loadable({
+  loader: () => import(/* webpackChunkName: 'navbar' */ './components/navbar'),
+  loading: LoadingPage,
+  delay: 300,
+});
+
+const AsyncFooter = Loadable({
+  loader: () => import(/* webpackChunkName: 'footer' */ './components/footer'),
+  loading: LoadingPage,
+  delay: 300,
+});
+//
 const NoMatch = ({ location }) => (
   <div>
     <h3>
-      No match for <code>{location.pathname}</code>
+      <code>{location.pathname}</code> does not exist.
     </h3>
   </div>
 );
@@ -17,12 +37,12 @@ const NoMatch = ({ location }) => (
 const Router = () => (
   <BrowserRouter>
     <div className="container">
-      <Route component={Navbar} />
+      <Route component={AsyncNavbar} />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={AsyncHome} />
         <Route path="*" component={NoMatch} />
       </Switch>
-      <Route component={Footer} />
+      <Route component={AsyncFooter} />
     </div>
   </BrowserRouter>
 );

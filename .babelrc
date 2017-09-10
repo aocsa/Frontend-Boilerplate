@@ -1,3 +1,13 @@
 {
-  "presets": ["babel-preset-env", "react"]
+  "presets": ["babel-preset-env", "react"],
+  "plugins": [
+    [
+      "import-inspector",
+      {
+        "serverSideRequirePath": true,
+        "webpackRequireWeakId": true
+      }
+    ],
+    "syntax-dynamic-import"
+  ]
 }
