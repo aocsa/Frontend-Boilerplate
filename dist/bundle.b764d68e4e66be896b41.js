@@ -9290,6 +9290,11 @@ module.exports = function (regExp, replace) {
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.App = undefined;
+
 var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
@@ -9314,7 +9319,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // TODO: HAVE TO COMMENT THIS OUT FOR TESTS TO WORK, FIND HOW TO USE BABEL IGNORE AND IGNORE CSS IMPORT FOR MOCHA !!
 
-var App = function App() {
+var App = exports.App = function App() {
   return _react2.default.createElement(
     _reactRedux.Provider,
     { store: _store2.default },
@@ -9445,7 +9450,7 @@ var AsyncFooter = (0, _reactLoadable2.default)({
   loading: _loading2.default,
   delay: 300
 });
-
+//
 var NoMatch = function NoMatch(_ref) {
   var location = _ref.location;
   return _react2.default.createElement(
