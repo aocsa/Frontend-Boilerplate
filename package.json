@@ -19,9 +19,9 @@
     "github":
       "git checkout gh-pages && npm run build && git subtree push --prefix dist origin gh-pages && git checkout master",
     "heroku":
-      "npm run build && git add . && git commit -m 'Deploying on heroku.. will revert.' && git push heroku master && heroku open && git reset --hard HEAD && npm run clean",
+      "npm run build && git add . && git commit -m 'Deploying on heroku.. will revert.' && git push heroku master && heroku open && git revert HEAD~2 && npm run clean",
     "aws":
-      "npm run build && git add . && git commit -m 'Deploying on AWS Elastic Beanstalk' && eb deploy && eb setenv NODE_ENV=production && eb open && git reset --hard HEAD && npm run clean"
+      "npm run build && git add . && git commit -m 'Deploying on AWS Elastic Beanstalk' && eb deploy && eb setenv NODE_ENV=production && eb open && git revert HEAD~2 && npm run clean"
   },
   "keywords": [
     "react",
