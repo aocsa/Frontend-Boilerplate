@@ -19,9 +19,9 @@
     "github":
       "git checkout gh-pages && npm run build && git subtree push --prefix dist origin gh-pages && git checkout master",
     "heroku":
-      "gitcommit -m 'Preparing to deploy on Heroku' && npm run build && gitcommit -m 'Deploying on Heroku' && git push heroku master && heroku open && npm run clean && gitcommit -m 'deployed on heroku, cleaned dist folder again..'",
+      "gitcommit 'Preparing to deploy on Heroku' && npm run build && gitcommit 'Deploying on Heroku' && git push heroku master && heroku open && npm run clean && gitcommit 'deployed on heroku, cleaned dist folder again..'",
     "aws":
-      "gitcommit -m 'preparing to deploy on AWS Elastic Beanstalk' && npm run build && gitcommit -m 'Deploying on AWS Elastic Beanstalk' && eb deploy && eb setenv NODE_ENV=production && eb open && npm run clean && gitcommit -m 'Deployed on AWS Elastic Beanstalk, cleaning dist folder..'"
+      "gitcommit 'preparing to deploy on AWS Elastic Beanstalk' && npm run build && gitcommit 'Deploying on AWS Elastic Beanstalk' && eb deploy && eb setenv NODE_ENV=production && eb open && npm run clean && gitcommit 'Deployed on AWS Elastic Beanstalk, cleaning dist folder..'"
   },
   "keywords": [
     "react",
