@@ -44,27 +44,27 @@ Such as:
 ### The Project Structure
 
 |-src/  
-|  |-actions/  
-|  |-assets/  
-|  |-components/  
-|  |-containers/  
-|  |-hoc/  
-|  |-middleware/  
-|  |-reducers/   
-|  |-styles/     
-|  |  
-|  |-app.js       
-|  |-index.html   
-|  |-router.js    
-|  |-store.js     
+| &nbsp; |-actions/  
+| &nbsp; |-assets/  
+| &nbsp; |-components/  
+| &nbsp; |-containers/  
+| &nbsp; |-hoc/  
+| &nbsp; |-middleware/  
+| &nbsp; |-reducers/   
+| &nbsp; |-styles/     
+| &nbsp; |  
+| &nbsp; |-app.js       
+| &nbsp; |-index.html   
+| &nbsp; |-router.js    
+| &nbsp; |-store.js     
 |-test/  
-|  |-actions/     
-|  |-assets/      
-|  |-components/  
-|  |-containers/  
-|  |-hoc/         
-|  |-middleware/  
-|  |-reducers/    
+| &nbsp; |-actions/     
+| &nbsp; |-assets/      
+| &nbsp; |-components/  
+| &nbsp; |-containers/  
+| &nbsp; |-hoc/         
+| &nbsp; |-middleware/  
+|  &nbsp;|-reducers/    
 |-.elasticbeanstalk/
 |  
 |-.babelrc           
