@@ -1,4 +1,4 @@
-require('babel-polyfill');
+// require('babel-polyfill');
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -9,7 +9,7 @@ const VENDOR = Object.keys(packageJSON.dependencies).filter(dependency => depend
 
 module.exports = {
   entry: {
-    bundle: ['babel-polyfill', './src/app.js'],
+    bundle: ['./src/app.js'],
     vendor: VENDOR,
   },
   output: {
