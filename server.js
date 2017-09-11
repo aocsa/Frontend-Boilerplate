@@ -8,11 +8,11 @@ const path = require('path');
 const port = process.env.PORT || 3000;
 const app = express();
 
-// //////////////////////////////////////////////////
-// DEFINE ALL API ROUTES RIGHT HERE, BEFORE SWITCH!!
-// //////////////////////////////////////////////////
+// //////////////////////////////////////////////////////////////
+// DEFINE ALL API ROUTES RIGHT HERE, BEFORE WEBPACK MIDDLEWARE!!
+// ////////////////////////////////////////////////////////////
 
-/* eslint-disable no-case-declarations global-require */
+/* eslint-disable global-require */
 
 if (process.env.NODE_ENV !== 'production') {
   const webpackMiddleware = require('webpack-dev-middleware');
@@ -27,6 +27,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 /* eslint-enable */
 
+// For https, you need this on localhost hosting
 // app.use((req, res, next) => {
 //   if (req.headers['x-forwarded-proto'] === 'https') {
 //     res.redirect(`http://${req.hostname}${req.url}`);

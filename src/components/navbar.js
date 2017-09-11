@@ -15,7 +15,7 @@ class Navbar extends Component {
           <div>
             <ul className="nav navbar-nav">
               <li>
-                <Link to="/BTM">Defunct link</Link>
+                <Link to="/doesNotExist">Defunct link</Link>
               </li>
             </ul>
           </div>
@@ -26,3 +26,9 @@ class Navbar extends Component {
 }
 
 export default connect()(Navbar);
+
+// A basic navbar component with bootstrap classes. You may pick your own css library.
+// Use <Link /> to link to routes within <Switch />
+// The use of <Link /> requires some testing setup for tests to access router context, that's why we wrapped our Test component with <MemoryRouter>
+
+// This component is a container (connected to redux) because we need some Navbar links and buttons to behave differently depending on data in Store. Such as authentication.

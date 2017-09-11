@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
-// import components
+// import components. to use route splotting, create new Async components by wrapping them with loadable.
 import Navbar from './components/navbar';
 import Home from './components/home';
 import Footer from './components/footer';
@@ -25,7 +25,8 @@ const AsyncFooter = Loadable({
   loading: LoadingPage,
   delay: 300,
 });
-//
+
+// the no match component is for mismatched/non-existing routes.
 const NoMatch = ({ location }) => (
   <div>
     <h3>
@@ -34,6 +35,8 @@ const NoMatch = ({ location }) => (
   </div>
 );
 
+// We want the navbar and the footer to be on every page, feel free to change it depending on your design.
+// exact path / stays ON TOP inside switch. Add new paths beneath / and above the no match route, more specialized route should be higher up. Or else /users/:id will route to /users if /users is higher up!
 const Router = () => (
   <BrowserRouter>
     <div className="container">

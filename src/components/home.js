@@ -8,3 +8,5 @@ class Home extends Component {
 }
 
 export default connect()(Home);
+
+// The '/' route as seen on page load. Did not make it a pure functional component because you will need to add stuff here.

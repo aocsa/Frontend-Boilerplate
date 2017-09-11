@@ -9,6 +9,5 @@ describe('Home', () => {
 
   it('should render', () => {
     mexpect(component).toBeDefined();
-    // expect(component).to.exist;
   });
 });
