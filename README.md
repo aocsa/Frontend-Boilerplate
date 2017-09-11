@@ -1,15 +1,17 @@
 # Frontend Boilerplate
 
-A modern boilerplate with
+A modern boilerplate with  
 
-React Fiber (react and react-dom@16)
-React Router 4 (route splitting included)
-React Redux
-Redux Form
-Webpack 3 (Code splitting, image and css imports, cache busting, extracted style)
-Mocha, Chai (Uses jsdom@8.5 as headless browser. Easy tests with a Test Helper)
-Easy Deployment Scripts (Surge, Heroku, AWS S3, AWS Elastic Beanstalk, Github Pages)
-Dual Dev Environment (Webpack Dev Server or Node.js Express Server)
+React Fiber (react and react-dom@16)  
+React Router 4 (route splitting included)  
+React Redux  
+Redux Form  
+Webpack 3 (Code splitting, image and css imports, cache busting, extracted style)  
+Mocha, Chai (Uses jsdom@8.5 as headless browser. Easy tests with a Test Helper)  
+Easy Deployment Scripts (Surge, Heroku, AWS S3, AWS Elastic Beanstalk, Github Pages)  
+Dual Dev Environment (Webpack Dev Server or Node.js Express Server)  
+Async/Await  
+Es7 syntax  
 
 
 
