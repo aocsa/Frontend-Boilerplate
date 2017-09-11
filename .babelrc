@@ -8,6 +8,13 @@
         "webpackRequireWeakId": true
       }
     ],
-    "syntax-dynamic-import"
+    "syntax-dynamic-import",
+    [
+      "transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": true
+      }
+    ]
   ]
 }
