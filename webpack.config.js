@@ -1,4 +1,3 @@
-// require('babel-polyfill'); // <- BLOATS BUNDLE.JS ABOUT 600% !! We are using babel-plugin-transform-runtime and babel-runtime instead.
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -17,6 +16,21 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].[chunkhash].js',
+  },
+  resolve: {
+    alias: {
+      App: path.resolve(__dirname, './src/app'),
+      Home: path.resolve(__dirname, './src/components/home'),
+      Navbar: path.resolve(__dirname, './src/components/navbar'),
+      Footer: path.resolve(__dirname, './src/components/footer'),
+      Loading: path.resolve(__dirname, './src/components/loading'),
+      Store: path.resolve(__dirname, './src/store'),
+      Router: path.resolve(__dirname, './src/router'),
+      Reducers: path.resolve(__dirname, './src/reducers/index'),
+      Actions: path.resolve(__dirname, './src/actions/index'),
+      Types: path.resolve(__dirname, './src/actions/types'),
+      Styles: path.resolve(__dirname, './src/styles/styles.css'),
+    },
   },
   module: {
     rules: [

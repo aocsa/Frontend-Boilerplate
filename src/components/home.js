@@ -3,13 +3,7 @@ import { connect } from 'react-redux';
 
 class Home extends Component {
   render() {
-    const test = async () => {
-      await setTimeout(() => {
-        console.log('works');
-      }, 10);
-    };
-    test();
-    return <div>This is the Home component. Your boilerplate works </div>;
+    return <div>This is the Home component. Your boilerplate works.</div>;
   }
 }
 

@@ -1,5 +1,5 @@
 {
-  "presets": ["babel-preset-env", "react"],
+  "presets": ["babel-preset-env", "react", "stage-0"],
   "plugins": [
     [
       "import-inspector",

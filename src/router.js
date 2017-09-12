@@ -3,25 +3,25 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
 // import components. to use route splotting, create new Async components by wrapping them with loadable.
-import Navbar from './components/navbar';
-import Home from './components/home';
-import Footer from './components/footer';
+import Navbar from 'Navbar';
+import Home from 'Home';
+import Footer from 'Footer';
 import LoadingPage from './components/loading';
 
 const AsyncHome = Loadable({
-  loader: () => import(/* webpackChunkName: 'home' */ './components/home'),
+  loader: () => import(/* webpackChunkName: 'home' */ 'Home'),
   loading: LoadingPage,
   delay: 300,
 });
 
 const AsyncNavbar = Loadable({
-  loader: () => import(/* webpackChunkName: 'navbar' */ './components/navbar'),
+  loader: () => import(/* webpackChunkName: 'navbar' */ 'Navbar'),
   loading: LoadingPage,
   delay: 300,
 });
 
 const AsyncFooter = Loadable({
-  loader: () => import(/* webpackChunkName: 'footer' */ './components/footer'),
+  loader: () => import(/* webpackChunkName: 'footer' */ 'Footer'),
   loading: LoadingPage,
   delay: 300,
 });
@@ -36,7 +36,9 @@ const NoMatch = ({ location }) => (
 );
 
 // We want the navbar and the footer to be on every page, feel free to change it depending on your design.
+
 // exact path / stays ON TOP inside switch. Add new paths beneath / and above the no match route, more specialized route should be higher up. Or else /users/:id will route to /users if /users is higher up!
+
 const Router = () => (
   <BrowserRouter>
     <div className="container">

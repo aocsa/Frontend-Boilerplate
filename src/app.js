@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import Router from './router';
-import store from './store';
-import './styles/styles.css';
+import Router from 'Router';
+import store from 'Store';
+import 'Styles';
 
 export const App = () => (
   <Provider store={store}>
