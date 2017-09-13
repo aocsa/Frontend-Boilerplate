@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
+import styled from 'emotion/react';
 
 // import components. to use route splotting, create new Async components by wrapping them with loadable.
 
@@ -29,13 +30,15 @@ const AsyncFooter = Loadable({
   delay: 300,
 });
 
+const BodyPadding = styled.div`padding: 0.5em 0.5em 0.5em 0.5em;`;
+
 // the no match component is for mismatched/non-existing routes.
 const NoMatch = ({ location }) => (
-  <div>
+  <BodyPadding>
     <h3>
       <code>{location.pathname}</code> does not exist.
     </h3>
-  </div>
+  </BodyPadding>
 );
 
 // We want the navbar and the footer to be on every page, feel free to change it depending on your design.
@@ -44,7 +47,7 @@ const NoMatch = ({ location }) => (
 
 const Router = () => (
   <BrowserRouter>
-    <div className="container">
+    <div>
       <Route component={AsyncNavbar} />
       <Switch>
         <Route exact path="/" component={AsyncHome} />

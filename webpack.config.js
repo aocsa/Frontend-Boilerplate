@@ -34,6 +34,7 @@ module.exports = {
       Types: path.resolve(__dirname, './src/actions/types'),
       Styles: path.resolve(__dirname, './src/styles/styles.css'),
     },
+    extensions: ['.js', '.jsx', '.json', 'css', 'scss'],
   },
   module: {
     rules: [

@@ -12,7 +12,9 @@ import chai, { expect } from 'chai'; // chai expect and chai
 import chaiJquery from 'chai-jquery'; // chai jQuery
 import mexpect from 'expect'; // mjackson expect
 
+/* eslint-disable */
 import store, { configure } from '../src/store';
+/* eslint-enable */
 
 // /// set up test helper to run like a browser in the command line ////////
 global.document = jsdom.jsdom('<!doctype html><html><body></body></html>');
