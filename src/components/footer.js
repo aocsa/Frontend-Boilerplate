@@ -3,6 +3,8 @@ import { injectGlobal } from 'emotion';
 
 // Global CSS styles for Bootstrap Sticky Footer
 
+// it's me diooooo
+
 injectGlobal`
 html {
   position: relative;
