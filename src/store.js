@@ -6,12 +6,12 @@ import { reducer as formReducer } from 'redux-form';
 const INITIAL_STATE = {};
 
 export const configure = (initialState = INITIAL_STATE) => {
-  // this bit taken from acemarke@reactiflux's store setup!
+  // this bit is taken from acemarke@reactiflux's store setup!
   const middlewares = [thunk];
   const appliedMiddlewares = redux.applyMiddleware(...middlewares);
   const composeArguments = [appliedMiddlewares];
   if (process.env.NODE_ENV === 'development') {
-    /* eslint-disable no-underscore-dangle */ // Install Redux Devtools Extension for this to work.
+    /* eslint-disable no-underscore-dangle */ // Install Redux Devtools Extension on Browser for this to work.
     composeArguments.push(
       global.window.__REDUX_DEVTOOLS_EXTENSION__ && global.window.__REDUX_DEVTOOLS_EXTENSION__(),
     );

@@ -3,10 +3,13 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
 // import components. to use route splotting, create new Async components by wrapping them with loadable.
+
+/* eslint-disable*/
 import Navbar from 'Navbar';
 import Home from 'Home';
 import Footer from 'Footer';
 import LoadingPage from './components/loading';
+/* eslint-enable*/
 
 const AsyncHome = Loadable({
   loader: () => import(/* webpackChunkName: 'home' */ 'Home'),

@@ -5,7 +5,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const packageJSON = require('./package.json');
 
 const VENDOR = Object.keys(packageJSON.dependencies).filter(
-  dependency => dependency !== 'express' && dependency !== 'babel-runtime',
+  dependency =>
+    dependency !== 'express' &&
+    dependency !== 'babel-runtime' &&
+    dependency !== 'babel-plugin-emotion',
 );
 
 module.exports = {

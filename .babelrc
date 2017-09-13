@@ -15,6 +15,7 @@
         "polyfill": false,
         "regenerator": true
       }
-    ]
+    ],
+    "emotion"
   ]
 }

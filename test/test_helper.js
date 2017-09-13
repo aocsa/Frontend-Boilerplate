@@ -17,7 +17,7 @@ import store, { configure } from '../src/store';
 // /// set up test helper to run like a browser in the command line ////////
 global.document = jsdom.jsdom('<!doctype html><html><body></body></html>');
 global.window = global.document.defaultView; // equate global.window to fake dom
-const $ = jquery(global.window); // Tell $ to look at our fake dom, not real one.
+const $ = jquery(global.window); // Tell $ to use our fake dom, not real one.
 // ////////////////////////////////////////////////////////////////////////////
 
 // //// build renderComponent helper to render a React class  //////////////////
