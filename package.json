@@ -2,26 +2,20 @@
   "name": "frontend-boilerplate",
   "version": "1.0.0",
   "repository": "https://github.com/Babazon/Frontend-Boilerplate.git",
-  "description":
-    "A boilerplate for developing production ready front ends using React, Redux, React Router, Webpack, Chai, Mocha, Eslint etc..",
+  "description": "A boilerplate for developing production ready front ends using React, Redux, React Router, Webpack, Chai, Mocha, Eslint etc..",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
     "build": "NODE_ENV=production npm run clean && webpack",
     "dev": "NODE_ENV=development open 'http://localhost:8080' && webpack-dev-server",
-    "test":
-      "NODE_ENV=test mocha --compilers js:babel-core/register  --require  ./test/css-null-compiler.js ./test/test_helper.js 'test/**/*.js'",
+    "test": "NODE_ENV=test mocha --compilers js:babel-core/register  --require  ./test/css-null-compiler.js ./test/test_helper.js 'test/**/*.js'",
     "test:watch": "NODE_ENV=test npm run test -- --watch",
-    "commit":
-      "npm run clean && git add . && git commit -m 'Commit by commit script automatically. Do not worry about the contents. Probably a semi colon fix or a curly bracket delete here and there.' && git push origin master",
+    "commit": "npm run clean && git add . && git commit -m 'Commit by commit script automatically. Do not worry about the contents. Probably a semi colon fix or a curly bracket delete here and there.' && git push origin master",
     "surge": "npm run build && surge -p dist",
     "amazon": "npm run build && s3-website deploy dist",
-    "github":
-      "git checkout gh-pages && npm run build && git subtree push --prefix dist origin gh-pages && git checkout master",
-    "heroku":
-      "npm run build && git add . && git commit -m 'Deploying on heroku.. will revert.' && git push heroku master && heroku open && git revert HEAD && npm run clean",
-    "aws":
-      "npm run build && git add . && git commit -m 'Deploying on AWS Elastic Beanstalk' && eb deploy && eb setenv NODE_ENV=production && eb open && git revert HEAD && npm run clean"
+    "github": "git checkout gh-pages && npm run build && git subtree push --prefix dist origin gh-pages && git checkout master",
+    "heroku": "npm run build && git add . && git commit -m 'Deploying on heroku.. will revert.' && git push heroku master && heroku open && git revert HEAD && npm run clean",
+    "aws": "npm run build && git add . && git commit -m 'Deploying on AWS Elastic Beanstalk' && eb deploy && eb setenv NODE_ENV=production && eb open && git revert HEAD && npm run clean"
   },
   "keywords": [
     "react",
@@ -41,7 +35,6 @@
   "author": "Babazon",
   "license": "ISC",
   "dependencies": {
-    "babel-plugin-emotion": "^7.2.2",
     "babel-runtime": "^6.26.0",
     "emotion": "^7.2.2",
     "express": "^4.15.4",
@@ -59,6 +52,7 @@
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.2",
+    "babel-plugin-emotion": "^7.3.2",
     "babel-plugin-import-inspector": "^2.0.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -84,6 +78,7 @@
     "react-loadable": "^4.0.5",
     "rimraf": "^2.6.1",
     "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
     "webpack": "^3.5.6",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^2.7.1"

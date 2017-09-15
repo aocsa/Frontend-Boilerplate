@@ -2,6 +2,51 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import styled from 'emotion/react';
+import { injectGlobal } from 'emotion';
+import image404 from './assets/images/404.gif';
+
+// ADDING NEW FONTS
+// DEFINE NEW FONT FAMILY, LOCATE URL IN ASSETS/FONTS, THEN SELECT WITH CSS (EMOTION)
+
+/* eslint-disable */
+injectGlobal`
+ @font-face {
+   font-family: 'Roboto';
+   src:  url('./assets/fonts/Roboto-Regular') format('ttf'),
+         url('./assets/fonts/Roboto-Black') format('ttf'),
+         url('./assets/fonts/Roboto-Italic') format('ttf'),
+         url('./assets/fonts/Roboto-Light') format('ttf'),
+         url('./assets/fonts/Roboto-Bold') format('ttf');
+   font-weight: 600;
+   font-style: normal;
+  }
+  body {
+    font-family: 'Roboto';
+    font-size: 18px;
+      margin-bottom: 120px;
+  }
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+    background: transparent linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    padding: 10px 5px;
+  }
+`;
+/* eslint-enable */
+
+const BodyPadding = styled.div`
+  padding: 0.5em 1em 0.5em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+`;
 
 // import components. to use route splotting, create new Async components by wrapping them with loadable.
 
@@ -30,14 +75,13 @@ const AsyncFooter = Loadable({
   delay: 300,
 });
 
-const BodyPadding = styled.div`padding: 0.5em 0.5em 0.5em 0.5em;`;
-
 // the no match component is for mismatched/non-existing routes.
 const NoMatch = ({ location }) => (
   <BodyPadding>
     <h3>
-      <code>{location.pathname}</code> does not exist.
+      <code>{location.pathname}</code> <em>does not exist.</em>
     </h3>
+    <img src={image404} />
   </BodyPadding>
 );
 

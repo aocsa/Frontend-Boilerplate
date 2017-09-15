@@ -51,7 +51,7 @@ module.exports = {
         }),
       },
       {
-        test: /\.(png|jpg|gif|svg|eot|tff|woff|woff2)$/,
+        test: /\.(png|jpg|gif|svg|jpeg)$/,
         use: [
           {
             loader: 'url-loader',
@@ -61,6 +61,10 @@ module.exports = {
           },
           'image-webpack-loader',
         ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: ['file-loader'],
       },
     ],
   },

@@ -4,26 +4,6 @@ import styled from 'emotion/react';
 
 // Global CSS styles for Bootstrap Sticky Footer
 
-/* eslint-disable */
-injectGlobal`
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  margin-bottom: 120px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  height: 120px;
-  width: 100%;
-  background: transparent linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
-  padding: 10px 5px;
-}
-`;
-/* eslint-enable */
-
 const FooterFlexContainer = styled.div`
   height: 100%;
   display: flex;
