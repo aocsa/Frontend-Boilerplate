@@ -43,11 +43,10 @@ Such as:
 > npm run build
 ```
 
-### Deploying Your Application
+# Deploying Your Application
 
-## Single Page Application
 
-# Surge
+### Surge
 
 Firstly install surge cli    
 `$ npm i -g surge`  
@@ -56,14 +55,14 @@ Then run the surge deploy script
 
 That's it.
 
-# Github Pages
+### Github Pages
 
 Firstly create a new branch named gh-pages  
 `$ git branch gh-pages`  
 Then run the gh-pages deploy script  
 `$ npm run github`  
 
-# Amazon S3 Bucket
+### Amazon S3 Bucket
 
 Firstly install the Amazon S3 cli   
 `$ npm i -g s3-website`    
@@ -84,7 +83,7 @@ Finally, run the deploy script:
 
 And you are done.
 
-# Heroku (via Node Express Server)  
+### Heroku (via Node Express Server)  
 
 Firstly, create a heroku account and install the cli  
 
@@ -105,7 +104,7 @@ Then, deploy any time you want by running:
 
 Heroku deploys git commits. It is not possible to deploy without committing a build as of now. Rolling back this dummy commit is managed by the script.
 
-# Amazon Elastic Beanstalk (via Node Express Server)   
+### Amazon Elastic Beanstalk (via Node Express Server)   
 
 Firstly install the aws elastic beanstalk cli.
 
@@ -141,7 +140,7 @@ That's it. The script will set eb env to production, build your app, deploy it t
 
 
 
-### The Project Structure
+# The Project Structure
 
 |-src/  
 | &nbsp; |-actions/  
