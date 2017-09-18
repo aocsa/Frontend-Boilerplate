@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import styled from 'emotion/react';
 import { injectGlobal } from 'emotion';
-import image404 from './assets/images/404.gif';
 
 // ADDING NEW FONTS
 // DEFINE NEW FONT FAMILY, LOCATE URL IN ASSETS/FONTS, THEN SELECT WITH CSS (EMOTION)
@@ -81,7 +80,6 @@ const NoMatch = ({ location }) => (
     <h3>
       <code>{location.pathname}</code> <em>does not exist.</em>
     </h3>
-    <img src={image404} />
   </BodyPadding>
 );
 
