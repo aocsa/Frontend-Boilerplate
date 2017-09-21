@@ -9,7 +9,7 @@ const Wrapper = styled.section`
 
 const StyledDiv = styled.div`
   border: 1px solid pink;
-  font: italic normal 2em/1.2 Arial, sans-serif;
+  font: bold normal 2em/1.2 Arial, sans-serif;
   margin: 10px 5px 10px 5px;
   background: transparent;
 `;

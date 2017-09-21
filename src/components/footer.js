@@ -1,5 +1,4 @@
 import React from 'react';
-import { injectGlobal } from 'emotion';
 import styled from 'emotion/react';
 
 // Global CSS styles for Bootstrap Sticky Footer
